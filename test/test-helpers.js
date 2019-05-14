@@ -5,7 +5,7 @@ function makeUsersArray() {
       user_name: 'test-user-1',
       full_name: 'Test user 1',
       nickname: 'TU1',
-      password: 'password',
+      password: '$2a$04$plsYjIIe9/ujOVkMOslUK.FFOMg9BzJA3iYAbAlvVlUKAgK1zwqM6',
       date_created: '2029-01-22T16:28:32.615Z',
     },
     {
@@ -13,7 +13,7 @@ function makeUsersArray() {
       user_name: 'test-user-2',
       full_name: 'Test user 2',
       nickname: 'TU2',
-      password: 'password',
+      password: '$2a$04$IJo2pHWGE8YE2h8KKFyYFOpkayUshRKP.vNWG6d8U45gtk.suz/T.',
       date_created: '2029-01-22T16:28:32.615Z',
     },
     {
@@ -21,7 +21,7 @@ function makeUsersArray() {
       user_name: 'test-user-3',
       full_name: 'Test user 3',
       nickname: 'TU3',
-      password: 'password',
+      password: '$2a$04$.muHWYx9vy.Vc3Vx4DVToOR5UeqbdkyWYp8qKmuZV75r8sI81EtNq',
       date_created: '2029-01-22T16:28:32.615Z',
     },
     {
@@ -29,7 +29,7 @@ function makeUsersArray() {
       user_name: 'test-user-4',
       full_name: 'Test user 4',
       nickname: 'TU4',
-      password: 'password',
+      password: '$2a$04$gAbXBAYj9OnweSJhG8cmbOPsHmJHMzOimx4aQDEJ3Smdsu28E2xni',
       date_created: '2029-01-22T16:28:32.615Z',
     },
   ]
@@ -231,6 +231,9 @@ function cleanTables(db) {
 }
 
 function seedThingsTables(db, users, things, reviews=[]) {
+
+
+
   return db
     .into('thingful_users')
     .insert(users)
