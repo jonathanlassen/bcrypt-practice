@@ -258,6 +258,14 @@ function seedMaliciousThing(db, user, thing) {
     )
 }
 
+function makeAuthHeader(user, secret = process.env.JWT_SECRET) {
+  const token = Buffer.from(`${user.user_name}:${user.password}`).toString('base64')	  const token = jwt.sign({ user_id: user.id }, secret, {
+  return `Basic ${token}`	    subject: user.user_name,
+    algorithm: 'HS256',
+  })
+  return `Bearer ${token}`
+}	}
+
 module.exports = {
   makeUsersArray,
   makeThingsArray,
